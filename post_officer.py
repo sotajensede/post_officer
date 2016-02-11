@@ -9,13 +9,13 @@ def send_some_mail():
     smtpObj.ehlo()
     smtpObj.starttls()
     smtpObj.login(username = input('Username: '),
-                            password = getpass.getpass())
+            password = getpass.getpass())
     #I guess sendmal() needs 2 newlines after the subject??
     subject = input('Subject: ')
     body = input('Body: ')
     smtpObj.sendmail(username,
-                                  recipient = input('Recipient: '),
-                                  'Subject: %s\n\n%s' % (subject,body))
+            recipient = input('Recipient: '),
+            'Subject: %s\n\n%s' % (subject,body))
     smtpObj.quit()
 
 def get_some_mail():
